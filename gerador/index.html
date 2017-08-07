@@ -1,0 +1,186 @@
+<html>
+
+<head>
+    <title>Assinatura Pagar.me</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="content-language" content="pt">
+    <style>
+        body {
+            color: #003920;
+        }
+        
+        input,
+        select {
+            font-family: 'Segoe UI', sans-serif;
+            font-size: 12px;
+            width: 100%;
+            height: 25px;
+            margin-top: 10px;
+            padding: 3px 5px;
+            border: 1px;
+            border-color: #b2b2b2;
+            border-style: solid;
+            border-radius: 3px -moz-border-radius: 3px;
+            -webkit-border-radius: 3px;
+            -khtml-border-radius: 3px;
+        }
+        
+        input:first-child {
+            margin-top: none;
+        }
+        
+        input[type="submit"],
+        input[type="button"],
+        input[type="reset"],
+        .bt {
+            height: 30px;
+            -moz-border-radius: 3px;
+            -webkit-border-radius: 3px;
+            -khtml-border-radius: 3px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        
+        input[type="submit"],
+        input[type="button"] {
+            background-color: #91c73e;
+            color: #003a21;
+            font-weight: bold;
+        }
+        
+        a,
+        a:visited,
+        .email {
+            color: #003a21 !important;
+        }
+
+    </style>
+</head>
+
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+    <table id="base" width="100%" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+            <td align="center">
+                <table id="gerador" width="100%" style="max-width:540px;" border="0" cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td>
+                            <form method="get" action="./">
+                                <select id="area" name="area">
+                                        <option selected>Qual a sua área?</option>
+                                    <optgroup label="MundiPagg" value="mundipagg">
+                                        <option value="desenvolvedores">Desenvolvedores</option>
+                                    </optgroup>
+                                    <optgroup label="Stone Co" value="stoneco">
+                                        <option value="controladoria">Controladoria</option>
+                                        <option value="marketing">Marketing</option>
+                                    </optgroup>
+                                </select>
+                                <input id="empresa" type="hidden" name="empresa">
+                                <input type="submit" value="GERAR">
+                            </form>
+                        </td>
+                    </tr>
+                </table>
+                <table id="final" width="100%" style="max-width:540px;" border="0" cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td id="header">
+                            <img src="" width="100%" style="max-width:540px;">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="corpo">
+                            <table width="100%" style="max-width:540px;" border="0" cellpadding="25" cellspacing="0">
+                                <tr>
+                                    <td>
+                                        <!-- TÍTULO -->
+                                        <font face="'Segoe UI', sans-serif" color="#003920">
+                                            <h1>Insira seu título aqui</h1>
+                                        </font>
+
+                                        <!-- CORPO -->
+                                        <font face="'Segoe UI', sans-serif" color="#003920" size="3">
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                        </font>
+
+                                        <!-- BOTÃO -->
+                                        <table border="0" cellpadding="0" cellspacing="12" align="center">
+                                            <tr>
+                                                <td>
+                                                    <table bgcolor="#003920" border="0" cellpadding="12" cellspacing="0" class="bt">
+                                                        <tr>
+                                                            <td>
+                                                                <font face="'Segoe UI', sans-serif" color="#FFFFFF"><a href="#" style="background-color:#003920; color:#FFFFFF !important; font-weight:bold; padding:10px 12px !important; text-decoration:none !important; -moz-border-radius: 3px; -webkit-border-radius: 3px; -khtml-border-radius: 3px; border: none; border-radius: 3px;">CALL TO ACTION</a></font>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+
+                                        <!-- QUOTE -->
+                                        <center>
+                                            <font face="'Segoe UI', sans-serif" color="#003920" size="2">Texto para citação</font>
+                                        </center>
+
+                                        <!-- CORPO -->
+                                        <font face="'Segoe UI', sans-serif" color="#003920" size="3">
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                        </font>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="footer">
+                            <img src="" width="100%" style="max-width:256px;">
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script>
+        $("#final").hide();
+
+        $("#area").on("change", function() {
+            var escolha = $(":selected", this);
+            var empresa = escolha.parent().attr("label")
+            if (empresa == "MundiPagg") {
+                $("#empresa").val("mundipagg");
+            }
+            if (empresa == "Pagar.me") {
+                $("#empresa").val("pagarme");
+            }
+            if (empresa == "Stone") {
+                $("#empresa").val("stone");
+            }
+            if (empresa == "Stone Co") {
+                $("#empresa").val("stoneco");
+            }
+        })
+
+        var queryString = new URLSearchParams(window.location.search);
+        var empresa = queryString.get('empresa');
+        var area = queryString.get('area');
+
+
+        if (empresa.length && area.length) {
+            $("#gerador").hide();
+            $("#final").show();
+            var newURL = window.location.protocol + "//" + window.location.host + window.location.pathname;
+            var header = newURL + "imgs/" + empresa + "/" + area + "/header.gif";
+            var footer = newURL + "imgs/" + empresa + "/footer.gif";
+            $("#header img").attr("src", header);
+            $("#footer img").attr("src", footer);
+        } else {
+            $("#gerador").show();
+            $("#final").hide();
+        }
+
+    </script>
+</body>
+
+</html>
